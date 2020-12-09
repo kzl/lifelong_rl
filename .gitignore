@@ -1,0 +1,17 @@
+# Random files
+**/.DS_STORE
+**/*.pyc
+**/*.swp
+MANIFEST
+*.egg-info
+\.idea/
+/.idea
+MUJOCO_LOG.TXT
+
+# Misc lifelong_rl directories
+/agent_data
+/data
+/misc
+/video
+/wandb
+/tmp
