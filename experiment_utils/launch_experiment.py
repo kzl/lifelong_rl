@@ -202,7 +202,7 @@ def run_sweep_multi_gpu(
         while not launched:
             for idx in range(num_runs):
                 if processes[idx] is None or not processes[idx].is_alive():
-                    kwarg['gpu_frac'] = gpu_frac
+                    # kwarg['gpu_frac'] = gpu_frac
                     p = multiprocessing.Process(target=run, kwargs=kwarg)
                     os.environ["CUDA_VISIBLE_DEVICES"] = "%d" % run_info[idx][0]
                     os.system("taskset -p -c %d-%d %d" % (run_info[idx][1] + (os.getpid(),)))
